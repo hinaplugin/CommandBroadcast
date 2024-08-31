@@ -1,0 +1,20 @@
+name: CommandBroadcast
+version: '1.0.0'
+main: com.hinaplugin.commandBroadcast.CommandBroadcast
+api-version: '1.20'
+authors: [ hina2113 ]
+description: コマンドの使用ログを送信
+
+commands:
+  broadcast:
+    permission: broadcast.command
+
+permissions:
+  broadcast.admin:
+    children:
+      - broadcast.command
+      - broadcast.send
+    default: op
+
+  broadcast.command: {}
+  broadcast.send: {}
